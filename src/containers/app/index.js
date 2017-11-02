@@ -4,6 +4,8 @@ import asyncComponent from '../../components/AsyncComponent'
 const AsyncHome = asyncComponent(() => import("../home"));
 const AsyncAbout = asyncComponent(() => import("../about"));
 
+
+
 const App = () => (
   <div>
     <header>
