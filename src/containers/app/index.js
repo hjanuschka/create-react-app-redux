@@ -1,7 +1,8 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom'
+import asyncComponent from '../../components/AsyncComponent'
 import Home from '../home'
-import About from '../about'
+const AsyncAbout = asyncComponent(() => import("../about"));
 
 const App = () => (
   <div>
@@ -12,7 +13,7 @@ const App = () => (
 
     <main>
       <Route exact path="/" component={Home} />
-      <Route exact path="/about-us" component={About} />
+      <Route exact path="/about-us" component={AsyncAbout} />
     </main>
   </div>
 )
