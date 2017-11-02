@@ -12,6 +12,9 @@
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-router-redux": "next",
+    "react-slick": "^0.15.4",
+    "react-swipeable-views": "^0.12.8",
+    "react-view-pager": "^0.5.1",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
     "sanitize.css": "^5.0.0"

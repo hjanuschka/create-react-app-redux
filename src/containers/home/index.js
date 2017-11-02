@@ -1,21 +1,28 @@
-import React from 'react'
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
+import React, {
+    Component
+} from 'react'
+import SwipeableViews from 'react-swipeable-views';
+import Ressort from '../../components/Ressort'
 
-const Home = props => (
-  <div>
-    <h1>Home</h1>
+class Home extends Component {
+    render() {
+        return (
+            <SwipeableViews>
+            <SwipeableViews style={{height: 500}}>
+                <Ressort slug="nachrichten" style={{height: 100}} />
+            </SwipeableViews>
+            <SwipeableViews  style={{height: 500}}>
+                <Ressort slug="welt"/>
+            </SwipeableViews>
+            <SwipeableViews style={{height: 500}}>
+                <Ressort slug="stars-society"  style={{minHeight: 100}}  />
+            </SwipeableViews>
+            </SwipeableViews>
 
-  </div>
-)
 
-const mapStateToProps = state => ({
-})
+        )
 
-const mapDispatchToProps = dispatch => bindActionCreators({
-}, dispatch)
+    }
+}
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Home)
+export default Home;
